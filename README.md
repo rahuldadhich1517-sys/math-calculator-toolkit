@@ -6,6 +6,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?logo=typescript)](https://www.typescriptlang.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)]()
+[![npm version](https://img.shields.io/npm/v/@rahul_dadhich15/math-calculator-toolkit.svg)](https://www.npmjs.com/package/@rahul_dadhich15/math-calculator-toolkit)
+[![Node Version](https://img.shields.io/node/v/@rahul_dadhich15/math-calculator-toolkit)](https://nodejs.org)
+
 
 ---
 
@@ -27,14 +30,12 @@
 14. [Numerical Precision & Rounding Policy](#numerical-precision--rounding-policy)
 15. [Security & Sandboxing](#security--sandboxing)
 16. [Performance Considerations](#performance-considerations)
-17. [Development & Testing](#development--testing)
-18. [Build & Packaging Verification](#build--packaging-verification)
-19. [Supported Environments](#supported-environments)
-20. [Known Limitations](#known-limitations)
-21. [Legal & Financial Disclaimers](#legal--financial-disclaimers)
-22. [Contribution Instructions](#contribution-instructions)
-23. [License](#license)
-24. [Changelog](#changelog)
+17. [Supported Environments](#supported-environments)
+18. [Known Limitations](#known-limitations)
+19. [Legal & Financial Disclaimers](#legal--financial-disclaimers)
+20. [Contribution Instructions](#contribution-instructions)
+21. [License](#license)
+22. [Changelog](#changelog)
 
 ---
 
@@ -411,36 +412,6 @@ The expression engine does **NOT** use `eval()`, `new Function()`, or dynamic co
 - **Zero Allocation in Critical Paths**: The tokenizer processes inputs in a single linear pass $O(N)$.
 - **Referential Determinism**: Every function is pure with zero side-effects.
 - **Native Platform Capabilities**: Relies directly on V8/JavaScript engine optimizations (`Math`, `Intl`).
-
----
-
-## Development & Testing
-
-```bash
-# Install dependencies
-npm install
-
-# Run static type checking
-npm run typecheck
-
-# Run test suite with Vitest
-npm run test:run
-
-# Run test suite with coverage report
-npm run test:coverage
-
-# Build distributable bundles (ESM, CJS, d.ts)
-npm run build
-```
-
----
-
-## Build & Packaging Verification
-
-```bash
-# Verify npm packaging contents
-npm pack --dry-run
-```
 
 ---
 

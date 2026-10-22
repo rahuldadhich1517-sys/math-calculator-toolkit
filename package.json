@@ -1,0 +1,99 @@
+{
+  "name": "@rahul_dadhich15/math-calculator-toolkit",
+  "version": "0.1.0",
+  "description": "Production-ready, dependency-free TypeScript toolkit for safe arithmetic expression evaluation, percentage, discount, GST, loan EMI, and localized number formatting.",
+  "keywords": [
+    "math",
+    "calculator",
+    "expression-parser",
+    "percentage",
+    "discount",
+    "gst",
+    "emi",
+    "loan-calculator",
+    "number-formatting",
+    "financial-calculator",
+    "intl",
+    "typescript"
+  ],
+  "author": {
+    "name": "Rahul Dadhich"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahuldadhich1517-sys/math-calculator-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rahuldadhich1517-sys/math-calculator-toolkit/issues"
+  },
+  "homepage": "https://github.com/rahuldadhich1517-sys/math-calculator-toolkit#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./calculator": {
+      "types": "./dist/calculator/index.d.ts",
+      "import": "./dist/calculator/index.js",
+      "require": "./dist/calculator/index.cjs"
+    },
+    "./percentage": {
+      "types": "./dist/percentage/index.d.ts",
+      "import": "./dist/percentage/index.js",
+      "require": "./dist/percentage/index.cjs"
+    },
+    "./discount": {
+      "types": "./dist/discount/index.d.ts",
+      "import": "./dist/discount/index.js",
+      "require": "./dist/discount/index.cjs"
+    },
+    "./gst": {
+      "types": "./dist/gst/index.d.ts",
+      "import": "./dist/gst/index.js",
+      "require": "./dist/gst/index.cjs"
+    },
+    "./emi": {
+      "types": "./dist/emi/index.d.ts",
+      "import": "./dist/emi/index.js",
+      "require": "./dist/emi/index.cjs"
+    },
+    "./number-format": {
+      "types": "./dist/number-format/index.d.ts",
+      "import": "./dist/number-format/index.js",
+      "require": "./dist/number-format/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.0.8",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}

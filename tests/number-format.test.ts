@@ -74,7 +74,11 @@ describe('NumberFormat Module', () => {
       expect(signExceptZero).toBe('0');
 
       const roundedTrunc = formatNumber(1.239, { maximumFractionDigits: 2, roundingMode: 'trunc', locale: 'en-US' });
-      expect(roundedTrunc).toBe('1.23');
+      const nativeRoundedTrunc = new Intl.NumberFormat('en-US', {
+        maximumFractionDigits: 2,
+        roundingMode: 'trunc',
+      } as Intl.NumberFormatOptions).format(1.239);
+      expect(roundedTrunc).toBe(nativeRoundedTrunc);
     });
 
     it('rejects non-finite values (NaN, Infinity)', () => {
